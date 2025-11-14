@@ -27,13 +27,13 @@ public class MatchSchedule {
 
     private LocalTime matchTime;
 
-//    @ManyToOne
-//    @JoinColumn(name = "home_team_id")
-//    private Team homeTeam;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "home_team_id")
+    private Team homeTeam;
 
-//    @ManyToOne
-//    @JoinColumn(name = "away_team_id")
-//    private Team awayTeam;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "away_team_id")
+    private Team awayTeam;
 
     private Integer round;
 
